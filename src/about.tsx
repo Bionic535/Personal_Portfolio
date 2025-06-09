@@ -1,4 +1,4 @@
-import logo from './assets/IMG_2685.jpg';
+
 import linkedin from './assets/icons8-linkedin-150.png'
 import github from './assets/icons8-github-150.png'
 function AboutMe() {
