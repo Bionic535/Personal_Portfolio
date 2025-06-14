@@ -6,7 +6,7 @@ const projects=[
         image: "e",
         tags: ["Django", "Sklearn", "HTTPS", "TailWind"],
         URL: "https://bionic535.pythonanywhere.com/",
-        Github_Link: "#",
+        Github_Link: "https://github.com/Bionic535/movieaisite",
         
     }
 ]
@@ -14,12 +14,16 @@ const projects=[
 function ProjectsSection() {
     return (
         <>
-            <div className="py-8">
+            <div className="border-t-4 border-blue-500">
                 {projects.map((project, key) => (
-                    <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover py-8">
+                    <div key={key} className="py-8 border-b-4 border-blue-500">
                         <div>
                             <h2 className="text-3xl">{project.title}</h2>
-                            <a className="text-3xl text-blue-500 hover:text-blue-700" href={project.URL} target="_blank" rel="noopener noreferrer">{project.URL}</a>
+                            <p className="text-3xl">{project.description}</p>
+                            <div className="flex flex-col">
+                                <a className="text-3xl hover:text-blue-700" href={project.URL} target="_blank" rel="noopener noreferrer">URL: {project.URL}</a>
+                                <a className="text-3xl hover:text-blue-700" href={project.Github_Link} target="_blank" rel="noopener noreferrer">GitHub URL: {project.Github_Link}</a>
+                            </div>
                         </div>
                     </div>
                 ))}
