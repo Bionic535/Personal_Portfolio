@@ -1,11 +1,15 @@
 import Header  from "./Header";
 import AboutMe from "./about";
+import Education from "./education";
+import ProjectsSection from "./ProjectsSection";
 
 function App() {
   return(
-    <div className="bg-grey-700">
+    <div className="min-h-screen bg-gray-700">
       <Header/>
       <AboutMe/>
+      <ProjectsSection/>
+      <Education/>
     </div>
   );
 }
