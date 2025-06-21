@@ -5,7 +5,7 @@ const projects=[
         description: "A website built on django that uses sklearn to recommend the user a set number of films based on a given film",
         image: "e",
         tags: ["Django", "Sklearn", "HTTPS", "TailWind"],
-        URL: "https://bionic535.pythonanywhere.com/",
+        URL: "https://movieaisite.onrender.com/",
         Github_Link: "https://github.com/Bionic535/movieaisite",
         
     }
