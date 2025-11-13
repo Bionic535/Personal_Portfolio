@@ -1,10 +1,9 @@
 
 import linkedin from './assets/icons8-linkedin-150.png'
 import github from './assets/icons8-github-150.png'
-function AboutMe() {
+function Socials() {
     return(
         <>
-        <h1 className="text-5xl">Hi My Name is Lachlan Bruce</h1>
         <ul className="flex justify-center gap-4 py-10">
             
             <li className="border hover:border-8 rounded-lg flex flex-col items-center p-4 border-[oklch(0.8839_0.175747_169.6)]" onClick={() => window.open('https://www.linkedin.com/in/lachlan-bruce-19378b301/', '_blank')}>
@@ -20,4 +19,4 @@ function AboutMe() {
     );
 }
 
-export default AboutMe
+export default Socials;
