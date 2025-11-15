@@ -1,9 +1,16 @@
-
+import { Button } from './components/ui/button';
 import linkedin from './assets/icons8-linkedin-150.png'
 import github from './assets/icons8-github-150.png'
 function Socials() {
     return(
         <>
+        <div className="min-h-screen flex items-center justify-center px-32">
+            <div className="border-4 rounded-lg p-8 flex flex-row gap-4" style={{ borderColor: 'var(--border-color)' }}>
+                <Button onClick={() => navigate('/socials')} style={{ borderColor: 'var(--border-color)', color: 'var(--border-color)' }} className='border-2 rounded-lg'>Social Media</Button>
+                <Button onClick={() => navigate('/projects')} style={{ borderColor: 'var(--border-color)', color: 'var(--border-color)' }} className='border-2 rounded-lg'>Projects</Button>
+                <Button onClick={() => navigate('/education')} style={{ borderColor: 'var(--border-color)', color: 'var(--border-color)' }} className='border-2 rounded-lg'>Education</Button>
+            </div>
+        </div>
         <ul className="flex justify-center gap-4 py-10">
             
             <li className="border hover:border-8 rounded-lg flex flex-col items-center p-4 border-[oklch(0.8839_0.175747_169.6)]" onClick={() => window.open('https://www.linkedin.com/in/lachlan-bruce-19378b301/', '_blank')}>
