@@ -1,3 +1,6 @@
+import { Button } from "./components/ui/button"
+import { useNavigate } from "react-router-dom";
+
 const projects=[
     {
         id: 1,
@@ -8,26 +11,44 @@ const projects=[
         URL: "https://movieaisite.fly.dev/",
         Github_Link: "https://github.com/Bionic535/movieaisite",
         
+    },
+    {
+        id: 2,
+        title: "NewsBuddy",
+        description: "An application built with electron that uses the openai api to summarise or fact check news articles for the user on manual input or with a keyboard shortcut",
+        image: "e",
+        tags: ["Electron", "TypeScript", "React", "TailWind"],
+        Github_Link: "https://github.com/Bionic535/NewsBuddy",
+        
     }
 ]
 
 function ProjectsSection() {
+    const navigate = useNavigate();
     return (
         <>
-            <div className="border-t-4 border-blue-500">
-                {projects.map((project, key) => (
-                    <div key={key} className="py-8 border-b-4 border-blue-500">
-                        <div>
-                            <h2 className="text-3xl">{project.title}</h2>
-                            <p className="text-3xl">{project.description}</p>
-                            <div className="flex flex-col">
-                                <a className="text-3xl hover:text-blue-700" href={project.URL} target="_blank" rel="noopener noreferrer">URL: {project.URL}</a>
-                                <a className="text-3xl hover:text-blue-700" href={project.Github_Link} target="_blank" rel="noopener noreferrer">GitHub URL: {project.Github_Link}</a>
+        <div className="fixed top-4 left-4">
+            <Button onClick={() => navigate('/')} style={{ borderColor: 'var(--border-color)', color: 'var(--border-color)' }} className='border-2 rounded-lg'>Go to Home</Button>
+        </div>
+            <div className="min-h-screen flex items-center justify-center px-32">
+                <div className="border-4 rounded-lg p-8" style={{ borderColor: 'var(--border-color)' }}>
+                    <div className="grid grid-cols-2 gap-8 w-full">
+                        {projects.map((project, key) => (
+                            <div key={key} className="border-4 rounded-lg p-8" style={{ borderColor: 'var(--border-color)' }}>
+                                <div>
+                                    <h2 className="text-3xl font-bold" style={{ color: 'var(--border-color)' }}>{project.title}</h2>
+                                    <p className="text-3xl" style={{ color: 'var(--border-color)' }}>{project.description}</p>
+                                    <div className="flex flex-col">
+                                        {project.URL && <a className="text-3xl" style={{ color: 'var(--border-color)' }} href={project.URL} target="_blank" rel="noopener noreferrer">URL: {project.URL}</a>}
+                                        {project.Github_Link && <a className="text-3xl" style={{ color: 'var(--border-color)' }} href={project.Github_Link} target="_blank" rel="noopener noreferrer">GitHub URL: {project.Github_Link}</a>}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
-                ))}
-            </div>
+                </div>
+                </div>
+            
         </>
     )
 }
