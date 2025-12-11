@@ -10,7 +10,7 @@ function Education(){
         <div className="min-h-screen flex items-center justify-center px-32">
             <div className="border-4 rounded-lg p-8 flex flex-col gap-4" style={{ borderColor: 'var(--border-color)' }}>
                 <p className="text-3xl font-bold" style={{ color: 'var(--border-color)' }}>Bachelor of Computing Major in Computer Science - Curtin University (2024 - 2026)</p>
-                <p className="text-3xl" style={{ color: 'var(--border-color)' }}>Weighted Average Mark: 75</p>
+                <p className="text-3xl" style={{ color: 'var(--border-color)' }}>Weighted Average Mark: 73.94</p>
                 <p className="text-3xl" style={{ color: 'var(--border-color)' }}>Concepts Learned:</p>
                 <ul className="list-disc list-inside text-3xl" style={{ color: 'var(--border-color)' }}>
                     <li>Data Structures (Stacks, Heaps, Queues, Linked Lists, Trees)</li>
