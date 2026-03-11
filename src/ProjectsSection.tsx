@@ -20,7 +20,26 @@ const projects=[
         tags: ["Electron", "TypeScript", "React", "TailWind"],
         Github_Link: "https://github.com/Bionic535/NewsBuddy",
         
+    },
+    {
+        id: 3,
+        title: "PokemonEbayBot",
+        description: "An AI agent built with langgraph that helps a user search for pokemon card listings on ebay.",
+        image: "e",
+        tags: ["langgraph"],
+        Github_Link: "https://github.com/Bionic535/PokemonEbayBot",
+        
+    },
+    {
+        id: 4,
+        title: "PokeStats",
+        description: "A website built on NextJs that will allow users to track the prices of pokemon cards.",
+        image: "e",
+        tags: ["NextJs", "TypeScript"],
+        Github_Link: "https://github.com/Bionic535/PokeStats",
+        
     }
+    
 ]
 
 function ProjectsSection() {
@@ -38,9 +57,32 @@ function ProjectsSection() {
                                 <div>
                                     <h2 className="text-3xl font-bold" style={{ color: 'var(--border-color)' }}>{project.title}</h2>
                                     <p className="text-3xl" style={{ color: 'var(--border-color)' }}>{project.description}</p>
-                                    <div className="flex flex-col">
-                                        {project.URL && <a className="text-3xl" style={{ color: 'var(--border-color)' }} href={project.URL} target="_blank" rel="noopener noreferrer">URL: {project.URL}</a>}
-                                        {project.Github_Link && <a className="text-3xl" style={{ color: 'var(--border-color)' }} href={project.Github_Link} target="_blank" rel="noopener noreferrer">GitHub URL: {project.Github_Link}</a>}
+                                    <div className="flex flex-col mt-4">
+                                        {project.URL && (
+                                            <a 
+                                                className="text-3xl block truncate w-full" 
+                                                style={{ color: 'var(--border-color)' }} 
+                                                href={project.URL} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                title={project.URL} // Shows full URL on hover
+                                            >
+                                                URL: {project.URL}
+                                            </a>
+                                        )}
+                                        
+                                        {project.Github_Link && (
+                                            <a 
+                                                className="text-3xl block truncate w-full" 
+                                                style={{ color: 'var(--border-color)' }} 
+                                                href={project.Github_Link} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                title={project.Github_Link} // Shows full URL on hover
+                                            >
+                                                GitHub URL: {project.Github_Link}
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>

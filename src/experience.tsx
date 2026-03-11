@@ -5,8 +5,22 @@ const experiences=[
     {
         id: 1,
         title: "RichMindWA Software Engineer Intern",
-        description: "Developed an azure function with c# to automatically sync 2 api's",
+        description: "Designed and implemented an automated user provisioning system between ELMO HR and Microsoft Entra ID using Azure Functions and C#, reducing manual onboarding/offboarding tasks.",
         Duration: "June 2025 - July 2025",
+        
+    },
+    {
+        id: 2,
+        title: "Curtin Research Intern",
+        description: "Looked into ways machine learning can be used to assist in detecting head positions from UWB radar scans in order to detect when patients could be experiencing sleep apnea.",
+        Duration: "December 2025 - February 2026",
+        
+  },
+  {
+        id: 3,
+        title: "Deloitte Intern",
+        description: "",
+        Duration: "March 2026 - November 2026",
         
     }
 ]
